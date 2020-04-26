@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Haduong Me</title>
-    <link>https://duongvanha.github.io/blog/public/posts/</link>
+    <link>https://duongvanha.github.io/blog/posts/</link>
     <description>Recent content in Posts on Haduong Me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
     <lastBuildDate>Mon, 27 Apr 2020 00:51:53 +0700</lastBuildDate>
     
-	<atom:link href="https://duongvanha.github.io/blog/public/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://duongvanha.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My First Post</title>
-      <link>https://duongvanha.github.io/blog/public/posts/my-first-post/</link>
+      <link>https://duongvanha.github.io/blog/posts/my-first-post/</link>
       <pubDate>Mon, 27 Apr 2020 00:51:53 +0700</pubDate>
       
-      <guid>https://duongvanha.github.io/blog/public/posts/my-first-post/</guid>
+      <guid>https://duongvanha.github.io/blog/posts/my-first-post/</guid>
       <description></description>
     </item>
     

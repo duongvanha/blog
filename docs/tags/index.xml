@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Haduong Me</title>
-    <link>https://duongvanha.github.io/blog/public/tags/</link>
+    <link>https://duongvanha.github.io/blog/tags/</link>
     <description>Recent content in Tags on Haduong Me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
     
-	<atom:link href="https://duongvanha.github.io/blog/public/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://duongvanha.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
