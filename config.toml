@@ -5,6 +5,7 @@ title = "Haduong Me"
 paginate = 5
 
 copyright = "© Copyright notice"
+publishDir = "docs"
 
 pygmentsstyle = "solarized-dark"
 pygmentscodefences = true
