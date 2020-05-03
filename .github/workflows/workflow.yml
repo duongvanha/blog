@@ -1,30 +1,17 @@
-name: github pages
-
+name: hugo-latest-cd
 on:
   push:
     branches:
       - master
-
 jobs:
-  deploy:
-    runs-on: ubuntu-18.04
+  build:
+
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      - name: 🛎 Check out master
+        uses: actions/checkout@master
         with:
-          submodules: false  # Fetch Hugo themes
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.68.3'
-          # extended: true
-
-      - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./docs
+          fetch-depth: 1
+      - name: 🚀 Build and deploy
+        uses: victoriadrake/hugo-latest-cd@master
