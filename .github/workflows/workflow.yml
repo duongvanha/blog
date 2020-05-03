@@ -1,4 +1,4 @@
-name: Publish Site
+name: github pages
 
 on:
   push:
@@ -6,20 +6,25 @@ on:
       - master
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
-          submodules: true
-      - name: Publish Site
-        uses: chabad360/hugo-gh-pages@master
+          submodules: false  # Fetch Hugo themes
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
         with:
-          githubToken: ${{ secrets.PERSONAL_TOKEN }}
-          # Remember to set this as a secret (i.e. secrets.PERSONAL_TOKEN).
-          # Don't forget to set the secret value in the project settings.
-          cname: sanlovie.com # Or anything else
-          # Use if you have a custom domain for your site.
-          branch: master # Or anything else
+          hugo-version: '0.68.3'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./docs
