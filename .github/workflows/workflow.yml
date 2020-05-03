@@ -1,0 +1,25 @@
+name: Publish Site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Publish Site
+        uses: chabad360/hugo-gh-pages@master
+        with:
+          githubToken: ${{ secrets.PERSONAL_TOKEN }}
+          # Remember to set this as a secret (i.e. secrets.PERSONAL_TOKEN).
+          # Don't forget to set the secret value in the project settings.
+          cname: sanlovie.com # Or anything else
+          # Use if you have a custom domain for your site.
+          branch: master # Or anything else
